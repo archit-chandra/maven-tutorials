@@ -1,0 +1,19 @@
+Surefire plugin:
+				Unit testing
+				
+				
+Failsafe plugin:
+				Integration testing
+				
+				By default, the Failsafe Plugin will automatically include all test classes with the following wildcard patterns:
+						- "**/IT*.java" - includes all of its subdirectories and all Java filenames that start with "IT".
+						- "**/*IT.java" - includes all of its subdirectories and all Java filenames that end with "IT".
+						- "**/*ITCase.java" - includes all of its subdirectories and all Java filenames that end with "ITCase".
+						
+						
+jacoco-maven-plugin (code coverage)						
+https://www.petrikainulainen.net/programming/maven/creating-code-coverage-reports-for-unit-and-integration-tests-with-the-jacoco-maven-plugin/
+
+
+SpotBugs plugin:
+https://spotbugs.readthedocs.io/en/stable/maven.html
