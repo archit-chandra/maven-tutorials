@@ -6,3 +6,4 @@
 03-generating-sources/03-generating-sources-lombok/target/
 03-generating-sources/03-generating-sources-mapstruct/03-generating-sources-mapstruct.iml
 03-generating-sources/03-generating-sources-mapstruct/target/
+05-multi-module/parent-module/parent-module.iml
