@@ -17,3 +17,6 @@ https://www.petrikainulainen.net/programming/maven/creating-code-coverage-report
 
 SpotBugs plugin:
 https://spotbugs.readthedocs.io/en/stable/maven.html
+
+Maven Enforcer plugin:
+https://maven.apache.org/enforcer/enforcer-rules/index.html
