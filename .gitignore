@@ -9,3 +9,4 @@
 05-multi-module/parent-module/parent-module.iml
 05-multi-module/parent-module/jpa-entities/target/
 05-multi-module/parent-module/web-api/target/
+05-multi-module/parent-module/web-app/target/
