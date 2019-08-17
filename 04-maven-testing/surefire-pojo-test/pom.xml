@@ -30,6 +30,21 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
+
+<!--    To run Junit5 and Junit4 unit test together-->
+<!--    (otherwise Junit4 tests will be ignored)-->
+        <dependency>
+            <groupId>org.junit.vintage</groupId>
+            <artifactId>junit-vintage-engine</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
