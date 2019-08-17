@@ -1,13 +1,14 @@
 package guru.springframework;
 
-// NOTES: surefire plugin
-//  automatically detect the test class (*Test)
+import org.junit.Test;
+
+import static org.junit.Assert.*;
+
 public class JavaHelloWorldTest {
 
-    // NOTES: surefire plugin
-    //  test* is the convention for test method
-    public void testGetHello() {
+    @Test
+    public void getHello() {
         JavaHelloWorld javaHelloWorld = new JavaHelloWorld();
-        assert ("Hello World".equals(javaHelloWorld.getHello()));
+        assertEquals("Hello World", javaHelloWorld.getHello());
     }
 }
