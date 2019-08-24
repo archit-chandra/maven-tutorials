@@ -20,3 +20,14 @@ https://spotbugs.readthedocs.io/en/stable/maven.html
 
 Maven Enforcer plugin:
 https://maven.apache.org/enforcer/enforcer-rules/index.html
+
+
+Spring Boot Dependency management:
+				
+	Maven Super POM
+	Spring Boot Build          - for building Spring Boot
+	Spring Boot Dependencies   - BOM/properties
+	Spring Boot Starter Parent - updates/adds common mavan plugins
+	Our Spring Boot project
+	
+mvn dependency:tree
