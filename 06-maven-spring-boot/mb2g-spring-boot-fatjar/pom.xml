@@ -16,6 +16,7 @@
 
 	<properties>
 		<java.version>11</java.version>
+		<some.custom.property>foo_bar</some.custom.property>
 	</properties>
 
 	<dependencies>
@@ -56,6 +57,12 @@
 						<goals>
 							<goal>build-info</goal>
 						</goals>
+						<configuration>
+							<additionalProperties>
+								<java.version>${java.version}</java.version>
+								<some.custom.property>${some.custom.property}</some.custom.property>
+							</additionalProperties>
+						</configuration>
 					</execution>
 					<execution>
 						<id>pre-it</id>
