@@ -31,3 +31,7 @@ Spring Boot Dependency management:
 	Our Spring Boot project
 	
 mvn dependency:tree
+
+mvn springboot:run
+mvn springboot:start
+mvn springboot:stop
