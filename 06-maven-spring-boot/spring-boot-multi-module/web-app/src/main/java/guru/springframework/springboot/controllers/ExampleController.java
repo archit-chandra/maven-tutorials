@@ -1,10 +1,10 @@
 package guru.springframework.springboot.controllers;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
 import java.util.HashMap;
 import java.util.Map;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * Created by jt on 2018-12-18.
