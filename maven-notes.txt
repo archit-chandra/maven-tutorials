@@ -30,8 +30,89 @@ Spring Boot Dependency management:
 	Spring Boot Starter Parent - updates/adds common mavan plugins
 	Our Spring Boot project
 	
-mvn dependency:tree
+	mvn dependency:tree
 
-mvn springboot:run
-mvn springboot:start
-mvn springboot:stop
+
+Running/Stopping Spring Boot via Maven:
+
+		1. mvn springboot:run
+		   mvn springboot:start
+		2. mvn springboot:stop
+
+
+Maven Search order:
+
+		1. Local repository
+		2. Maven central repository
+		3. Additional repositories configured
+		
+		
+Additional repositories configuration:
+
+		1. POM          - will be applicable to that Maven project
+		2. settings.xml - system wide (all projects on that system)
+		
+		
+Repository Element:
+
+		1. id        - unique value required
+		2. name      - human readable name
+		3. url       - URL for the repository
+		4. layout    - legacy or default (default is generally used)
+		5. releases  - repository policy for handling downloading of releases
+		6. snapshots - repository policy for handling downloading of snapshots
+		
+		
+Repository Policy:
+
+		1. enabled         - true/false
+		2. updatePolicy    - always, daily (default), interval (xxx in minutes), never
+		3. checksumPolicy  - what to do when verification of artifacts fails (ignore, fail, warn)
+
+
+
+    <mirrors>
+        <mirror>
+            <id>UK</id>
+            <url>http://uk.maven.org/maven2</url>
+            <mirrorOf>central</mirrorOf>
+        </mirror>
+    </mirrors>
+	
+
+            <repositories>
+                <repository>
+                    <id>redhat-ga</id>
+                    <url>https://maven.repository.redhat.com/ga/</url>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </repository>
+            </repositories>
+
+
+    <profiles>
+        <profile>
+            <id>jboss</id>
+            <repositories>
+                <repository>
+                    <id>redhat-ga</id>
+                    <url>https://maven.repository.redhat.com/ga/</url>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </repository>
+            </repositories>
+        </profile>
+    </profiles>
+    <activeProfiles>
+        <activeProfile>jboss</activeProfile>
+    </activeProfiles>
+	
+	
+	
+Manually installing dependencies:
+	
+		1. Download jar
+		2. cd to that folder
+		3. mvn install:install-file -Dfile=./ojdbc7.jar -DgroupId=com.oracle -DartifactId=ojdbc7 -Dversion=12.1.0.1 -Dpackaging=jar
