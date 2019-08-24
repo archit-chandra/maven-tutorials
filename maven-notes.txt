@@ -124,5 +124,53 @@ Maven Password Encryption:
 		https://maven.apache.org/guides/mini/guide-encryption.html
 		
 		
-		
+Download/Resolve dependencies from Nexus:
 
+			<repositories>
+				<-- for snapshot version -->
+				<repository>
+					<id>nexus-snapshot</id>
+					<url>http://localhost:8081/repository/nexus-snapshot/</url>
+					<snapshots>
+						<enabled>true</enabled>
+					</snapshots>
+				</repository>
+				<-- for release version -->
+				<repository>
+					<id>nexus-release</id>
+					<url>http://localhost:8081/repository/nexus-release/</url>
+					<snapshots>
+						<enabled>true</enabled>
+					</snapshots>
+				</repository>
+			</repositories>
+
+
+Upload artifacts to Nexus:
+ 
+			<distributionManagement>
+				<-- for snapshot version -->
+				<snapshotRepository>
+					<id>nexus-snapshot</id>
+					<url>http://localhost:8081/repository/nexus-snapshot/</url>
+				</snapshotRepository>
+				<-- for release version -->
+				<repository>
+					<id>nexus-release</id>
+					<url>http://localhost:8081/repository/nexus-release/</url>
+				</repository>
+			</distributionManagement>
+
+
+In settins.xml:
+
+			<server>
+				<id>nexus-snapshot</id>
+				<username>admin</username>
+				<password>admin123</password>
+			</server>
+			<server>
+				<id>nexus-release</id>
+				<username>admin</username>
+				<password>admin123</password>
+			</server>
