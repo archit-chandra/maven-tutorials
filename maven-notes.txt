@@ -174,3 +174,18 @@ In settins.xml:
 				<username>admin</username>
 				<password>admin123</password>
 			</server>
+			
+			
+For Nexus Group:
+
+			1. Remove <repositories> section, <distributionManagement> will remain the same to upload artifacts
+			2. In settings.xml, add <mirrors> section
+			
+							    <mirrors>
+									<mirror>
+										<id>central</id>
+										<name>central</name>
+										<url>http://localhost:8081/repository/nexus-group/</url>
+										<mirrorOf>*</mirrorOf>
+									</mirror>
+								</mirrors>
