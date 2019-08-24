@@ -13,3 +13,4 @@
 05-multi-module/parent-module/converters/target/
 .flattened-pom.xml
 06-maven-spring-boot/spring-boot-multi-module/web-app/target/
+06-maven-spring-boot/spring-boot-multi-module/web-model/target/
