@@ -52,6 +52,12 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<executions>
 					<execution>
+						<id>auto-build-info</id>
+						<goals>
+							<goal>build-info</goal>
+						</goals>
+					</execution>
+					<execution>
 						<id>pre-it</id>
 						<goals>
 							<goal>start</goal>
