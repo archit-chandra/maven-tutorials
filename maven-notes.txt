@@ -116,3 +116,13 @@ Manually installing dependencies:
 		1. Download jar
 		2. cd to that folder
 		3. mvn install:install-file -Dfile=./ojdbc7.jar -DgroupId=com.oracle -DartifactId=ojdbc7 -Dversion=12.1.0.1 -Dpackaging=jar
+		
+		
+
+Maven Password Encryption:
+	
+		https://maven.apache.org/guides/mini/guide-encryption.html
+		
+		
+		
+
